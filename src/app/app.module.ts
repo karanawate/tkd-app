@@ -17,6 +17,7 @@ const appRoutes: Routes = [
   { path:'coach', component:CoachComponent},
   { path:'student', component:StudentComponent},
   { path:'users', component:UsersComponent},
+  { path:'users/:id/:name', component:UserComponent},
 
 ];
 @NgModule({
