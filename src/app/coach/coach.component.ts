@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, } from '@angular/core';
 import { Coach } from './coach.model';
 import { DataService } from './data.service';
 
@@ -50,8 +50,8 @@ export class CoachComponent implements OnInit {
     });
   }
     coachedit(index: number){
+      this.editMode = true;
       this.editindex = index;
-        this.editMode = true;
         const row = this.data[index]
         console.log(this.data[index])
         this.coach.id = row.id
