@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Document</title>
+  <style>
+    .ourform{
+      width:40%;
+
+    }
+    .col{
+      padding-top:5px;
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="ourform center-block">
+              <form (ngSubmit) ="inserted_coach()">
+                <div>
+                  <div class="col">
+                    <input type="text" class="form-control" name="name"  [(ngModel)]="coach.name" placeholder="First name" id="name" #name >
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control" name="age" [(ngModel)]="coach.age" placeholder="Enter Age" id ="age" #age>
+                  </div>
+                </div>
+                <div>
+                  <div class="col">
+                    <input type="text" class="form-control" name="address" [(ngModel)]="coach.address" placeholder="Enter Address"id="address" #address >
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control" name="Belt" [(ngModel)]="coach.Belt" placeholder="Enter Belt" id="Belt" #Belt>
+                  </div>
+                  <div class="pt-5">
+                    <button class="btn btn-primary lg center-block">{{editMode? 'Updated Coach':'save' }}</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 table-responsive">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th scope="col">Id</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Age</th>
+                  <th scope="col">Address</th>
+                  <th scope="col">Operation</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let coach of data; index as i">
+                  <th scope="row">{{ coach.id }}</th>
+                  <td>{{ coach.name }}</td>
+                  <td>{{coach.age}}</td>
+                  <td>{{coach.address}}</td>
+                  <td><button (click)="coachdelete(coach.id)" class="fa fa-trash-o" style="font-size:24px"></button>
+                   <button><i  (click)="coachedit(i)"class="fa fa-edit" style="font-size:24px"></i></button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+        </div>
+    </div>
+</body>
+</html>
