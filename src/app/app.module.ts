@@ -7,7 +7,13 @@ import { CoachComponent } from './coach/coach.component';
 import { StudentComponent } from './student/student.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { Routes, RouterModule  } from '@angular/router';
 
+const appRoutes: Routes = [
+   { path:'', component:HomeComponent},
+  { path:'coach', component:CoachComponent},
+  { path:'student', component:StudentComponent}
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +25,8 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    RouterModule.forRoot(appRoutes),
+
   ],
   providers: [],
   bootstrap: [AppComponent]
