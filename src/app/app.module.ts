@@ -8,18 +8,27 @@ import { StudentComponent } from './student/student.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule  } from '@angular/router';
+import { UsersComponent } from './users/users.component';
+import { UserComponent } from './users/user/user.component';
+
 
 const appRoutes: Routes = [
    { path:'', component:HomeComponent},
   { path:'coach', component:CoachComponent},
-  { path:'student', component:StudentComponent}
+  { path:'student', component:StudentComponent},
+  { path:'users', component:UsersComponent},
+
 ];
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CoachComponent,
-    StudentComponent
+    StudentComponent,
+    UsersComponent,
+    UserComponent,
+
+
   ],
   imports: [
     BrowserModule,
