@@ -11,12 +11,18 @@ import { Routes, RouterModule  } from '@angular/router';
 import { UsersComponent } from './users/users.component';
 import { UserComponent } from './users/user/user.component';
 import { CoachinfoComponent } from './coachinfo/coachinfo.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 const appRoutes: Routes = [
-   { path:'', component:HomeComponent},
+  { path:'', component:HomeComponent},
+  {path:'login', component:LoginComponent},
+  {path:'register', component:RegisterComponent},
   { path:'coach', component:CoachComponent},
   { path:'student', component:StudentComponent},
+
   { path:'users', component:UsersComponent, children:[
     { path:':id/:name', component:UserComponent},
   ]},
@@ -33,6 +39,9 @@ const appRoutes: Routes = [
     UsersComponent,
     UserComponent,
     CoachinfoComponent,
+    LoginComponent,
+    RegisterComponent,
+    NavbarComponent,
 
 
   ],
