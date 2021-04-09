@@ -14,24 +14,9 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { appRoutingModule } from './app-routing-module';
 
 
-const appRoutes: Routes = [
-  { path:'', component:HomeComponent},
-  {path:'login', component:LoginComponent},
-  {path:'register', component:RegisterComponent},
-  { path:'coach', component:CoachComponent},
-  { path:'student', component:StudentComponent},
-
-  { path:'users', component:UsersComponent, children:[
-    { path:':id/:name', component:UserComponent},
-  ]},
-
-  { path:'coachinfo/:id', component:CoachinfoComponent},
-  {path:'page-not-found', component:PageNotFoundComponent},
-  {path:'**', redirectTo:'page-not-found'},
-
-];
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,8 +37,7 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes),
-
+    appRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
