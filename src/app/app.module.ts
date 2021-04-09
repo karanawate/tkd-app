@@ -6,7 +6,6 @@ import { CoachComponent } from './coach/coach.component';
 import { StudentComponent } from './student/student.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { Routes, RouterModule  } from '@angular/router';
 import { UsersComponent } from './users/users.component';
 import { UserComponent } from './users/user/user.component';
 import { CoachinfoComponent } from './coachinfo/coachinfo.component';
