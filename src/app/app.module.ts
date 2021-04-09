@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { CoachComponent } from './coach/coach.component';
@@ -14,6 +13,7 @@ import { CoachinfoComponent } from './coachinfo/coachinfo.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 const appRoutes: Routes = [
@@ -28,6 +28,8 @@ const appRoutes: Routes = [
   ]},
 
   { path:'coachinfo/:id', component:CoachinfoComponent},
+  {path:'page-not-found', component:PageNotFoundComponent},
+  {path:'**', redirectTo:'page-not-found'},
 
 ];
 @NgModule({
@@ -42,6 +44,7 @@ const appRoutes: Routes = [
     LoginComponent,
     RegisterComponent,
     NavbarComponent,
+    PageNotFoundComponent,
 
 
   ],
