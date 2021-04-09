@@ -58,7 +58,7 @@
               <tbody>
                 <tr *ngFor="let coach of data; index as i">
                   <th scope="row">{{ coach.id }}</th>
-                  <td>{{ coach.name }}</td>
+                  <td><a [routerLink]="['/coachinfo', coach.id]" >{{ coach.name }}</a></td>
                   <td>{{coach.age}}</td>
                   <td>{{coach.address}}</td>
                   <td><button (click)="coachdelete(coach.id)" class="fa fa-trash-o" style="font-size:24px"></button>

@@ -8,6 +8,13 @@ import { DataService } from './data.service';
   styleUrls: ['./coach.component.css']
 })
 export class CoachComponent implements OnInit {
+  coach_id:any;
+  student_name:any;
+  student_address:any;
+  student_gmail:any;
+  student_belt:any;
+  student_number:any;
+  student_parent_number:any;
 
   data: any = [];
   coach = new Coach();
@@ -42,7 +49,8 @@ export class CoachComponent implements OnInit {
         })
       }
 
-  }
+
+    }
 
   coachdelete(coach){
     this.collection.splice(coach-1, 1);
@@ -61,6 +69,9 @@ export class CoachComponent implements OnInit {
         this.coach.Belt = row.Belt
 
       }
-
+      getStudent(id)
+      {
+        console.log(this.coach);
+      }
 
 }

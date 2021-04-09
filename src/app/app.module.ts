@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule  } from '@angular/router';
 import { UsersComponent } from './users/users.component';
 import { UserComponent } from './users/user/user.component';
+import { CoachinfoComponent } from './coachinfo/coachinfo.component';
 
 
 const appRoutes: Routes = [
@@ -18,6 +19,7 @@ const appRoutes: Routes = [
   { path:'student', component:StudentComponent},
   { path:'users', component:UsersComponent},
   { path:'users/:id/:name', component:UserComponent},
+  { path:'coachinfo/:id', component:CoachinfoComponent},
 
 ];
 @NgModule({
@@ -28,6 +30,7 @@ const appRoutes: Routes = [
     StudentComponent,
     UsersComponent,
     UserComponent,
+    CoachinfoComponent,
 
 
   ],

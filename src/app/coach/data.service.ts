@@ -23,6 +23,9 @@ export class DataService {
   onUpdateCoach(id, data){
     return this.httpClient.put('http://localhost/angularApiPhp/update.php?id='+id, data)
   }
+  onCoachInfo(id){
+    return this.httpClient.get('http://localhost/angularApiPhp/student/index.php?id='+id)
+  }
 
 
 }
