@@ -17,8 +17,10 @@ const appRoutes: Routes = [
    { path:'', component:HomeComponent},
   { path:'coach', component:CoachComponent},
   { path:'student', component:StudentComponent},
-  { path:'users', component:UsersComponent},
-  { path:'users/:id/:name', component:UserComponent},
+  { path:'users', component:UsersComponent, children:[
+    { path:':id/:name', component:UserComponent},
+  ]},
+
   { path:'coachinfo/:id', component:CoachinfoComponent},
 
 ];
